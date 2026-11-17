@@ -18,6 +18,8 @@ open -a "Google Chrome" http://localhost:3017
 ~/Desktop/nudes/research/.venv/bin/python -I scripts/build_images.py   # rebuild public/images (Pillow venv borrowed from nudes)
 ```
 
+GitHub: `origin` = github.com/plvn-code/ego (branch `main`; GitHub CLI at `~/.local/bin/gh`) — commit and push after each finished task. No Vercel project yet.
+
 Restart only our port: `kill $(lsof -ti tcp:3017 -sTCP:LISTEN)`. After visible changes: build, restart, check 390px and 1440px (Playwright MCP), then tell the user. `node_modules` is a **symlink** to `~/Desktop/nudes/node_modules` (same package.json; the Mac is short on disk) — run `npm install` here only if dependencies change.
 
 ## Stack

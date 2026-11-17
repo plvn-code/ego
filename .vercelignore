@@ -1,0 +1,7 @@
+# Not needed on Vercel
+/originals
+/node_modules
+/.next
+*.tsbuildinfo
+.DS_Store
+/research

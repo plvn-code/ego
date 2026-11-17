@@ -3861,7 +3861,7 @@ ol {
 }
 
 .footer__brand img {
-  width: 150px;
+  width: 104px;
 }
 
 .footer__brand p,
@@ -3890,14 +3890,36 @@ ol {
   border-color: #fff;
 }
 
+/* Footer signature: compact logo between two hairlines */
+.footer__word {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 56px);
+  padding: clamp(28px, 4vw, 56px) 0 clamp(36px, 5vw, 64px);
+  overflow: visible;
+}
+
+.footer__rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22));
+}
+
+.footer__rule:last-child {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent);
+}
+
 .footer__word img {
-  opacity: 0.08;
-  transform: translateY(18%);
+  width: clamp(130px, 14vw, 200px);
+  height: auto;
+  opacity: 0.88;
+  transform: none;
+  transition: opacity 0.5s var(--ease), transform 0.8s var(--ease-out);
 }
 
 .footer__word:hover img {
-  opacity: 0.14;
-  transform: translateY(10%);
+  opacity: 1;
+  transform: translateY(-3px);
 }
 
 .footer__bottom {

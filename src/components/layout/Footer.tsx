@@ -13,7 +13,6 @@ export async function Footer() {
     <footer className="footer">
       <div className="container footer__top">
         <div className="footer__brand">
-          <Image src="/brand/ego-logo-white.png" alt="EGO — women wear" width={524} height={308} sizes="170px" />
           <p>Жіночий одяг, який ти захочеш. Готові капсули до твоєї події, швидка відправка, обмін і повернення.</p>
           <div className="footer__social">
             <a href={site.socials.instagram.url} target="_blank" rel="noreferrer" aria-label="Instagram">
@@ -78,9 +77,13 @@ export async function Footer() {
         </div>
       </div>
 
-      <Link href="/" className="footer__word" aria-label="EGO — на головну">
-        <Image src="/brand/ego-mark-white.png" alt="" width={525} height={198} sizes="100vw" />
-      </Link>
+      <div className="container">
+        <Link href="/" className="footer__word" aria-label="EGO — на головну">
+          <span className="footer__rule" aria-hidden="true" />
+          <Image src="/brand/ego-logo-white.png" alt="" width={524} height={308} sizes="220px" />
+          <span className="footer__rule" aria-hidden="true" />
+        </Link>
+      </div>
 
       <div className="container footer__bottom">
         <span>© {year} EGO · women wear</span>
